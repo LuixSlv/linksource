@@ -151,11 +151,19 @@
     &copy; 2024 @LuixSlv.<br>Todos os direitos reservados.
   </div>
 
-  // js tema
-function toggleTheme() {
-  const body = document.querySelector('body');
-  body.classList.toggle('light-theme');
-}
+  //js tema
+<script>
+  function toggleTheme() {
+    const body = document.querySelector('body');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    body.classList.toggle('light-theme');
+    
+    // Update emoji based on the current theme
+    const isLightTheme = body.classList.contains('light-theme');
+    themeToggle.innerHTML = isLightTheme ? '🌙' : '🌞';
+  }
+</script>
 
 </body>
 </html>
