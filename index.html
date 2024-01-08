@@ -76,6 +76,49 @@
       bottom: 0;
       width: 100%;
     }
+    /* Add this style for the theme toggle button */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  outline: none;
+  z-index: 2;
+}
+
+/* Add this style for the light theme */
+.light-theme body {
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+  color: black;
+}
+
+/* Update existing styles to use the light theme class */
+.light-theme #background {
+  background: linear-gradient(to bottom, #87CEEB, #ffffff);
+}
+
+.light-theme #container {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+}
+
+.light-theme #profile-pic {
+  border: 5px solid black;
+}
+
+.light-theme .link a {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.light-theme #copyright {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+}
   </style>
 </head>
 <body>
@@ -100,10 +143,19 @@
       <a href="https://twitter.com" target="_blank">Twitter</a>
     </div>
   </div>
+  
+
+<div id="theme-toggle" onclick="toggleTheme()">🌞</div>
 
   <div id="copyright">
     &copy; 2024 @LuixSlv.<br>Todos os direitos reservados.
   </div>
+
+  // js tema
+function toggleTheme() {
+  const body = document.querySelector('body');
+  body.classList.toggle('light-theme');
+}
 
 </body>
 </html>
