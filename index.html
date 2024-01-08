@@ -7,9 +7,14 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Oswald', sans-serif;
       color: white;
       overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      height: 110vh;
+ 
     }
 
     #background {
@@ -32,6 +37,8 @@
       padding: 20px;
       text-align: center;
       border-radius: 10px;
+      margin-bottom: 20px; /* Ajuste a margem conforme necessário */
+      
     }
 
     #profile-pic {
@@ -45,6 +52,7 @@
     #title {
       font-size: 20px;
       margin-bottom: 5px;
+      font-weight: bold;
     }
 
     #description {
@@ -59,23 +67,34 @@
     }
 
     .link a {
-      display: inline-block;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 1px solid #ccc; /* Adiciona uma borda cinza fina */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  opacity: 80%; /* Torna o botão um pouco transparente */
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave de opacidade */
+}
+
+.link a:hover {
+  opacity: 0.2; /* Aumenta a opacidade ao passar o mouse */
+}
+
 
     #copyright {
       text-align: center;
       margin-top: 20px;
       padding: 10px;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-      position: absolute;
+      position: fixed;
       bottom: 0;
       width: 100%;
     }
+
+    
     /* Add this style for the theme toggle button */
 #theme-toggle {
   position: fixed;
@@ -100,11 +119,11 @@
 
 /* Update existing styles to use the light theme class */
 .light-theme #background {
-  background: linear-gradient(to bottom, #87CEEB, #ffffff);
+  background: linear-gradient(to bottom, rgba(30,140,205,1) 0%, rgba(0,215,255,1) 50%, rgba(223,255,255,1) 100%);
 }
 
 .light-theme #container {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(90deg, rgba(255,243,243,0.8) 0%, rgba(255,255,255,0.8) 100%);
 }
 
 .light-theme #profile-pic {
@@ -112,14 +131,34 @@
 }
 
 .light-theme .link a {
-  background: rgba(0, 0, 0, 0.1);
-  color: black;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(201,163,255,0.1) 70%);
+  color: Black;
 }
 
 .light-theme #copyright {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
+
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 700px) {
+  #copyright {
+
+    bottom: 10;
+    transition: bottom 0.3s ease;
+  }
+
+  body {
+    overflow-y: scroll; /* Adiciona rolagem vertical ao corpo */
+    padding-bottom: 60px; /* Ajusta o espaço para o rodapé */
+  }
+  
   </style>
+  
+ <!-- Incluída a importação da fonte Oswald -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+  
+</head>
+<body>
 </head>
 <body>
 
@@ -128,7 +167,7 @@
   <div id="container">
     <img id="profile-pic" src="images/dark-profile-pic.jpg" alt="Foto">
     <div id="title">@LuixSlv</div>
-    <div id="description"><p>🧑🏻‍💻| Sou um aspirante a programação, designer e game developer.</p><p>💡| Aqui estarão os links das minhas redes sociais junto com meu portifolio e futuros projetos.</p>Se sintam a vontade! ❤️</div>
+    <div id="description"><p>🧑🏻‍💻| Sou um aspirante a programação, designer e game developer.<br>💡| Aqui estarão os links das minhas redes sociais junto com meu portifolio e futuros projetos.</p>Sintam-se a vontade! ❤️</div>
 
     <div class="link">
       <a href="https://instagram.com/LuixMath_" target="_blank">Instagram</a>
