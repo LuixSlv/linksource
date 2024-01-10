@@ -187,9 +187,6 @@
     &copy; 2024 @LuixSlv.<br>Todos os direitos reservados.
   </div>
   
-  <!-- Usando loading="auto" (o padrão) -->
-<img src="images/IMG_0043.jpeg" alt="Light Theme Profile" loading="auto">
-  
   <script>
     //js tema
   function toggleTheme() {
@@ -205,7 +202,7 @@
     body.style.color = isLightTheme ? 'black' : 'white';
     
     // Update profile picture source based on the current theme
-    const newPicSrc = isLightTheme ? 'images/IMG_0043.jpeg' : 'images/dark-profile-pic.jpg';
+    const newPicSrc = isLightTheme ? 'images/IMG_0043.jpeg' : 'images/dark-profile-pic.jpg' loading="eager";
     profilePic.src = newPicSrc;
     profilePic.alt = isLightTheme ? 'Light Foto' : 'Dark Foto';
   
