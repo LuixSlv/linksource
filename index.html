@@ -205,7 +205,10 @@
     const newPicSrc = isLightTheme ? 'images/IMG_0043.jpeg' : 'images/dark-profile-pic.jpg';
     profilePic.src = newPicSrc;
     profilePic.alt = isLightTheme ? 'Light Foto' : 'Dark Foto';
-  
+
+    // Chama a função toggleTheme() quando a página é carregada
+    window.onload = toggleTheme;
+    
   }
 </script>
 
